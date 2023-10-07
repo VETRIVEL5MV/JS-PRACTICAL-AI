@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Dislike Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #like-button {
+            background-color: green;
+            color: white;
+        }
+        #dislike-button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Like Dislike Counter</h1>
+        <div>
+            <button id="like-button">Like</button>
+            <span id="like-count">0</span>
+        </div>
+        <div>
+            <button id="dislike-button">Dislike</button>
+            <span id="dislike-count">0</span>
+        </div>
+    </div>
+
+    <script>
+        // Get elements by their IDs
+        const likeButton = document.getElementById('like-button');
+        const dislikeButton = document.getElementById('dislike-button');
+        const likeCount = document.getElementById('like-count');
+        const dislikeCount = document.getElementById('dislike-count');
+
+        // Initialize counts
+        let likeCounter = 0;
+        let dislikeCounter = 0;
+
+        // Add event listeners for like and dislike buttons
+        likeButton.addEventListener('click', () => {
+            likeCounter++;
+            likeCount.textContent = likeCounter;
+        });
+
+        dislikeButton.addEventListener('click', () => {
+            dislikeCounter++;
+            dislikeCount.textContent = dislikeCounter;
+        });
+    </script>
+</body>
+</html>

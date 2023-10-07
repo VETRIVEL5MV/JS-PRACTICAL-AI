@@ -1,0 +1,8 @@
+body{
+background-color: rgb(58, 221, 239);
+}
+.new{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    }
